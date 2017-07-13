@@ -26,7 +26,7 @@ body {
     .nav-header {
         display: flex;
         align-items: center;
-        width: $body-width;
+        max-width: $body-width;
         height: $nav-height;
         margin: 0 auto;
         position: relative;
@@ -44,10 +44,11 @@ body {
             height: $nav-height;
             line-height: $nav-height;
             padding: 0 10px;
+            text-transform: uppercase;
             &:active, &.active {
                 color: #333;
             }
-            &:hover{
+            &:hover {
                 color: $main-color;
             }
             &.active {
@@ -56,10 +57,11 @@ body {
         }
     }
 
-
 }
+
 .logo {
     color: $main-color;
+    text-transform: uppercase;
 }
 
 .container {
@@ -76,27 +78,37 @@ body {
     .article-card {
         margin-bottom: 10px;
         background: white;
+        border: 1px solid #e7eaf1;
         & > div {
             padding: 10px;
         }
         .card-header {
-            border-bottom: 1px solid #f7f8fa;
+            border-bottom: 1px solid $border-color;
             h3 {
                 margin: 10px 0;
             }
-            .author{
+            .author {
                 color: #999;
             }
         }
         .card-body {
             line-height: 1.67;
+            a {
+                color: lighten(#333333, 10%);
+                &:hover {
+                    color: #333333;
+                }
+            }
         }
     }
 
     .aside {
         min-width: 300px;
+        width: 300px;
         .aside-card {
             background-color: white;
+            border: 1px solid $border-color;
+            margin-bottom: 10px;
             a {
                 color: #999;
                 font-size: 14px;
@@ -114,6 +126,21 @@ body {
                 h3 {
                     font-style: normal;
                     margin: 10px 0;
+                    text-transform: uppercase;
+                }
+            }
+            .aside-body {
+                .tags-list {
+                    margin-bottom: 7px;
+                }
+                .tags {
+                    padding: 10px;
+                }
+                .tag {
+                    color: white;
+                    background-color: #2196f3;
+                    padding: 2px 4px;
+                    border-radius: 2px;
                 }
             }
         }
@@ -145,45 +172,185 @@ ul.list-unstyled {
     }
 }
 
-footer{
-    padding-top:50px;
+footer {
+    padding-top: 50px;
     color: white;
     background-color: #333;
-    .foot-group{
-        width:$body-width;
-        margin:0 auto;
+    .foot-group {
+        max-width: $body-width;
+        margin: 0 auto;
     }
-    .copyright{
-        margin:0 auto;
+    .social {
+        li {
+            margin: 0 5px;
+        }
+    }
+    .copyright {
+        margin: 0 auto;
         color: #a9a9a9;
         text-align: center;
         background-color: #282828;
         padding-top: 15px;
         padding-bottom: 15px;
+        position: relative;
+    }
+    .author-name {
+        text-transform: uppercase;
+        margin: 0;
+    }
+    .author-desc {
+        color: #a9a9a9;
+    }
+    .email {
+        display: block;
+        color: #ddd;
+    }
+    .about, .description {
+        flex: 1;
+    }
+    .list {
+        margin: 0 10px;
+        .desc-h {
+            margin-bottom: 10px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            padding-bottom: 10px;
+            font-size: 20px;
+        }
+        .desc-b {
+            .list-unstyled li {
+                line-height: 1.5;
+                margin-bottom: 10px;
+                a {
+                    text-transform: lowercase;
+                    color: #dddddd;
+                    font-size: 14px;
+                    &:hover {
+                        color: #ffffff;
+                    }
+                }
+                small {
+                    display: block;
+                    color: #999;
+                }
+            }
+        }
+    }
+    .to-top{
+        position: absolute;
+        right: 10px;
+        top:-20px;
+        background-color: $main-color;
+        color: white;
+        width:40px;
+        height:40px;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:hover{
+            background-color: darken($main-color,10%);
+        }
     }
 }
 
-.pagination{
+.pagination {
     padding-left: 0;
     margin: 18px 0;
-    li{
+    li {
         margin: 0 1px;
         display: inline-block;
         vertical-align: top;
-    }
-    a{
-        border-radius: 50%;
-        &.active{
-
-            &:focus,&:hover{
+        &.active {
+            a, span {
                 z-index: 3;
                 color: #fff;
                 background-color: $main-color;
                 border-color: transparent;
-                cursor: default
+                cursor: default;
+
             }
         }
-
+    }
+    & > li > a, & > li > span {
+        padding: 0;
+        width: 32px;
+        height: 32px;
+        line-height: 30px;
+        text-align: center;
+        font-size: 14px;
+        z-index: 1;
+        position: relative;
+        cursor: pointer;
+        background-clip: padding-box;
+        transition: all;
+        transition-duration: .3s;
+        float: left;
+        text-decoration: none;
+        color: #7E7E7E;
+        background-color: #E2E2E2;
+        border: 1px solid transparent;
+        margin-left: -1px;
+    }
+    a, span {
+        border-radius: 50%;
+    }
+    a {
+        &:focus, &:hover {
+            z-index: 3;
+            color: #fff;
+            background-color: $main-color;
+            border-color: transparent;
+            cursor: pointer;
+        }
     }
 
+}
+
+.list-inline {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    li {
+        display: inline-block;
+    }
+}
+
+@media (max-width: $phone-size) {
+    .aside {
+        display: none;
+    }
+    .container {
+        width:100%;
+        max-width:100%;
+        padding: 0;
+        .main {
+            margin-right: 0;
+        }
+        .aside{
+            min-width:0;
+            width:0;
+        }
+    }
+    .header .nav-header{
+        width:100%;
+    }
+
+    footer{
+        padding-top:rem(30px);
+        .description,.youlike{
+            display: none;
+        }
+        .foot-group{
+            max-width:100%;
+        }
+    }
+    .container .article-card .card-header h3{
+        font-size: rem(21px);
+    }
+    .container .article-card .card-header .author{
+        font-size: rem(14px);
+    }
+    .pagination{
+        text-align: center;
+    }
 }

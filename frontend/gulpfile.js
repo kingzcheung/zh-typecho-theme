@@ -39,13 +39,13 @@ gulp.task('stylesheet', function () {
 });
 
 // javascript任务
-gulp.task('javascript', function () {
+gulp.task('js', function () {
     //js代码校验
-    return gulp.src('src/js/*.js')
+    return gulp.src(['src/jquery.min.js','src/js/*.js'])
         .pipe(jshint())
         .pipe(jshint.reporter('default'))
         //js代码合并
-        .pipe(concat('all.js'))
+        .pipe(concat('main.js'))
         //给文件添加.min后缀
         .pipe(rename({suffix: '.min'}))
         //压缩脚本文件
@@ -64,12 +64,19 @@ gulp.task('images', function () {
         .pipe(notify({message: 'Images task complete'}));
 });
 
+//FONTS
+gulp.task('fonts',function () {
+   return gulp.src('src/fonts/*')
+       .pipe(gulp.dest('assets/fonts'))
+       .pipe(notify({message: '字体加载成功'}));
+});
+
 // default 任务
 gulp.task('default', function () {
     // Watch .scss files
     gulp.watch('src/scss/*.scss', ['stylesheet']);
     // Watch .js files
-    gulp.watch('src/js/*.js', ['javascript']);
+    gulp.watch('src/js/*.js', ['js']);
     // Watch image files
     gulp.watch('src/images/*', ['images']);
     // Create LiveReload server
