@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+.card{
+    padding: 10px;
+    font-size: 14px;
+    color: #555;
+    .list-unstyled li{
+        line-height: 1.5;
+    }
+    span{
+        color: inherit;
+    }
+    a{
+        font-size: inherit;
+        color: $main-color;
+    }
+}

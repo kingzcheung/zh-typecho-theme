@@ -34,17 +34,21 @@ body {
         transition: transform .3s, -webkit-transform .3s;
         justify-content: space-between;
     }
-    .nav {
-        display: flex;
-        justify-content: space-between;
-        color: #999;
-        height: 100%;
-        align-items: center;
-        a {
-            height: $nav-height;
-            line-height: $nav-height;
-            padding: 0 10px;
-            text-transform: uppercase;
+    .navbar-toggle {
+        display: none;
+    }
+    .navbar-nav {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        li {
+            display: inline-block;
+            a {
+                height: $nav-height;
+                line-height: $nav-height;
+                padding: 0 10px;
+                text-transform: uppercase;
+            }
             &:active, &.active {
                 color: #333;
             }
@@ -55,6 +59,14 @@ body {
                 background-color: $active-color;
             }
         }
+    }
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        color: #999;
+        height: 100%;
+        align-items: center;
+
     }
 
 }
@@ -98,6 +110,9 @@ body {
                 &:hover {
                     color: #333333;
                 }
+            }
+            img {
+                max-width: 100%;
             }
         }
     }
@@ -235,20 +250,20 @@ footer {
             }
         }
     }
-    .to-top{
+    .to-top {
         position: absolute;
         right: 10px;
-        top:-20px;
+        top: -20px;
         background-color: $main-color;
         color: white;
-        width:40px;
-        height:40px;
+        width: 40px;
+        height: 40px;
         border-radius: 20px;
         display: flex;
         align-items: center;
         justify-content: center;
-        &:hover{
-            background-color: darken($main-color,10%);
+        &:hover {
+            background-color: darken($main-color, 10%);
         }
     }
 }
@@ -315,42 +330,3 @@ footer {
     }
 }
 
-@media (max-width: $phone-size) {
-    .aside {
-        display: none;
-    }
-    .container {
-        width:100%;
-        max-width:100%;
-        padding: 0;
-        .main {
-            margin-right: 0;
-        }
-        .aside{
-            min-width:0;
-            width:0;
-        }
-    }
-    .header .nav-header{
-        width:100%;
-    }
-
-    footer{
-        padding-top:rem(30px);
-        .description,.youlike{
-            display: none;
-        }
-        .foot-group{
-            max-width:100%;
-        }
-    }
-    .container .article-card .card-header h3{
-        font-size: rem(21px);
-    }
-    .container .article-card .card-header .author{
-        font-size: rem(14px);
-    }
-    .pagination{
-        text-align: center;
-    }
-}

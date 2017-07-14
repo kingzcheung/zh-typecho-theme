@@ -30,67 +30,56 @@
     <div class="main">
         <article class="article-card">
             <div class="card-header">
-                <h3><a href="javascript:;">Linux Mint MariaDB 修改默认密码</a></h3>
+                <h3>Linux Mint MariaDB 修改默认密码</h3>
                 <small class="author">by kingzcheung on July 8, 2017</small>
             </div>
             <div class="card-body">
-                <a href="javascript:;">使用 apt-get 安装mariaDB 有可能没有提示输入密码(ubuntu是会提示输入密码，但是不知道为什么linux mint
-                    不提示)，这需要我们自己去修改密码。</a>
-            </div>
-            <div class="card-footer"></div>
-        </article>
-        <article class="article-card">
-            <div class="card-header">
-                <h3><a href="javascript:;">Linux Mint MariaDB 修改默认密码</a></h3>
-                <small class="author">by kingzcheung on July 8, 2017</small>
-            </div>
-            <div class="card-body">
-                <a href="javascript:;">使用 apt-get 安装mariaDB 有可能没有提示输入密码(ubuntu是会提示输入密码，但是不知道为什么linux mint
-                    不提示)，这需要我们自己去修改密码。</a>
+
+                <pre class="hljs javascript"><code>exports.reload = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+    <span class="hljs-keyword">var</span> marked = <span class="hljs-built_in">require</span>(<span class="hljs-string">"marked"</span>);
+    <span class="hljs-keyword">var</span> hljs = <span class="hljs-built_in">require</span>(<span class="hljs-string">"highlight.js"</span>);
+    marked.setOptions({
+    <span class="hljs-attr">renderer</span>: <span class="hljs-keyword">new</span> marked.Renderer(),
+        <span class="hljs-attr">gfm</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">tables</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">breaks</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">pedantic</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">sanitize</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">smartLists</span>: <span class="hljs-literal">true</span>,
+        <span class="hljs-attr">smartypants</span>: <span class="hljs-literal">false</span>,
+        <span class="hljs-attr">highlight</span>:<span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">code</span>)</span>{<span class="hljs-keyword">return</span> hljs.highlightAuto(code).value;}
+    });
+    <span class="hljs-keyword">var</span> resultDiv = global.$(<span class="hljs-string">'.md_result'</span>);
+    <span class="hljs-keyword">var</span> textEditor = global.$(<span class="hljs-string">'#editor'</span>);
+    <span class="hljs-keyword">var</span> text = textEditor.val();
+    resultDiv.html(marked(text));
+};</code></pre>
+
+                <p>杀死mysql进程</p>
+                <pre><code>sudo kill -9 $(pgrep mysql)
+</code></pre>
+                <p>重新启动</p>
+                <pre><code>sudo service mysql start
+</code></pre>
+                <img src="http://bizhi.zhuoku.com/2011/10/18/jingxuan/jingxuan032.jpg" alt="">
             </div>
             <div class="card-footer"></div>
         </article>
 
-        <article class="article-card">
-            <div class="card-header">
-                <h3><a href="javascript:;">Linux Mint MariaDB 修改默认密码</a></h3>
-                <small class="author">by kingzcheung on July 8, 2017</small>
-            </div>
-            <div class="card-body">
-                <a href="javascript:;">使用 apt-get 安装mariaDB 有可能没有提示输入密码(ubuntu是会提示输入密码，但是不知道为什么linux mint
-                    不提示)，这需要我们自己去修改密码。</a>
-            </div>
-            <div class="card-footer"></div>
-        </article>
-
-        <article class="article-card">
-            <div class="card-header">
-                <h3><a href="javascript:;">Linux Mint MariaDB 修改默认密码</a></h3>
-                <small class="author">by kingzcheung on July 8, 2017</small>
-            </div>
-            <div class="card-body">
-                <a href="javascript:;">使用 apt-get 安装mariaDB 有可能没有提示输入密码(ubuntu是会提示输入密码，但是不知道为什么linux mint
-                    不提示)，这需要我们自己去修改密码。</a>
-            </div>
-            <div class="card-footer"></div>
-        </article>
-
-        <nav class="text-center">
-            <ul class="pagination">
-                <li class="active"><a href="https://www.kingzcheung.com/page/1/">1</a></li>
-                <li><a href="https://www.kingzcheung.com/page/2/">2</a></li>
-                <li><a href="https://www.kingzcheung.com/page/3/">3</a></li>
-                <li><a href="https://www.kingzcheung.com/page/4/">4</a></li>
-                <li><span>...</span></li>
-                <li><a href="https://www.kingzcheung.com/page/6/">6</a></li>
-                <li class="next">
-                    <a href="https://www.kingzcheung.com/page/2/">
-                        <i class="fa fa-angle-right"></i>
-                    </a>
+        <div class="card article-card">
+            <ul class="list-unstyled">
+                <li>
+                    <span>上一篇：</span>
+                    <a href="https://www.kingzcheung.com/archives/71.html" title="Python 自定义命令之电子书下载器">Python
+                        自定义命令之电子书下载器</a>
+                </li>
+                <li>
+                    <span>下一篇：</span>
+                    <a href="https://www.kingzcheung.com/archives/71.html" title="Python 自定义命令之电子书下载器">Python
+                        自定义命令之电子书下载器</a>
                 </li>
             </ul>
-
-        </nav>
+        </div>
     </div>
 
     <aside class="aside">
@@ -230,5 +219,8 @@
 </footer>
 <script src="assets/js/jquery.min.js"></script>
 <script src="assets/js/main.min.js"></script>
+<script>
+    if (typeof hljs !== 'undefined') hljs.initHighlightingOnLoad();
+</script>
 </body>
 </html>
