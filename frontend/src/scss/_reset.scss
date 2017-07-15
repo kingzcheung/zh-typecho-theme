@@ -5,17 +5,33 @@ html, body {
     padding: 0;
 }
 
-
 body {
-    font-size: $root-font-size;
+    font-size: 14px;
     font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
     color: #262626;
 }
 
-a{
+a {
     color: inherit;
     text-decoration: none;
 }
-a:hover{
-    color: lighten($main-color,10%);
+
+a:hover {
+    color: lighten($main-color, 10%);
+}
+
+code, kbd, pre, samp {
+    font-family: "Source Code Pro", Consolas, Menlo, Monaco, "Courier New", monospace;
+}
+
+pre, textarea {
+    overflow: auto;
+}
+
+.btn, html {
+    -webkit-tap-highlight-color: transparent;
+}
+
+input, button {
+    outline: none;
 }

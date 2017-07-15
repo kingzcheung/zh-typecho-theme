@@ -1,8 +1,11 @@
 @charset "UTF-8";
 
 @media (max-width: $phone-size) {
+    body{
+        font-size: $root-font-size;
+    }
     .aside {
-        display: none;
+        display: none!important;
     }
     .container {
         width: 100%;
@@ -10,6 +13,7 @@
         padding: 0;
         .main {
             margin-right: 0;
+            width: 100%;
         }
         .aside {
             min-width: 0;

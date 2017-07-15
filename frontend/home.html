@@ -6,9 +6,9 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>首页</title>
-    <link rel="stylesheet" href="assets/css/style.min.css">
+    <link rel="stylesheet" href="assets/css/style_light.min.css" data-rootdir="" id="theme-light">
 </head>
-<body>
+<body data-rootdir="">
 <header class="header is-fixed">
     <div class="nav-header">
         <a href="/" class="logo">KINGZCHEUNG</a>
@@ -94,6 +94,31 @@
     </div>
 
     <aside class="aside">
+        <!--search,theme-->
+        <div class="aside-card">
+            <div class="aside-body">
+                <div class="search">
+                    <form action="" method="post" class="searching">
+                        <input type="text" name="s" placeholder="Search for articles">
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div class="aside-card">
+            <div class="aside-header">
+                <h3>theme</h3>
+            </div>
+            <div class="aside-body">
+                <div class="theme">
+                    <ul class="list-inline">
+                        <li><button type="button" class="light" data-theme="light"></button></li>
+                        <li><button type="button" class="dark" data-theme="dark"></button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!--ARCHIVE-->
         <div class="aside-card">
             <div class="aside-header">
                 <h3>ARCHIVE</h3>

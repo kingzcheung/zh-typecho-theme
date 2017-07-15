@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+@import "normalize";
+@import "init";
+@import "var_light";
+
+@import "reset";
+
+
+//引入字体
+@import "awesome/font-awesome";
+//引入代码样式
+@import "highlightjs/atom-one-light";
+//页面
+@import "common";
+@import "common_xs";
+
+@import "post";
+
+@import "home";

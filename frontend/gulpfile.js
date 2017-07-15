@@ -35,7 +35,7 @@ gulp.task('stylesheet', function () {
         //输出压缩文件到指定目录
         .pipe(gulp.dest('assets/css'))
         //提醒任务完成
-        .pipe(notify({message: 'stylesheet task complete'}));
+        .pipe(notify({message: '样式编译完成！'}));
 });
 
 // javascript任务

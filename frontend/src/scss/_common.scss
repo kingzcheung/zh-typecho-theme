@@ -1,19 +1,19 @@
 @charset "UTF-8";
 
 body {
-    background: #f7f8fa;
+    background: $body-background-color;
 }
 
 .header {
     position: relative;
     z-index: 2;
-    background: #fff;
+    background: $main-background-color;
     overflow: hidden;
     width: 100%;
     top: 0;
     left: 0;
     right: 0;
-    border-bottom: 1px solid rgba(30, 35, 42, .06);
+    border-bottom: 1px solid rgba($box-border-color,.6);
 
     &.is-fixed {
         position: fixed;
@@ -50,10 +50,10 @@ body {
                 text-transform: uppercase;
             }
             &:active, &.active {
-                color: #333;
+                color: $main-color;
             }
             &:hover {
-                color: $main-color;
+                color: $primary-color;
             }
             &.active {
                 background-color: $active-color;
@@ -72,7 +72,7 @@ body {
 }
 
 .logo {
-    color: $main-color;
+    color: $primary-color;
     text-transform: uppercase;
 }
 
@@ -89,8 +89,8 @@ body {
     }
     .article-card {
         margin-bottom: 10px;
-        background: white;
-        border: 1px solid #e7eaf1;
+        background: $main-background-color;
+        border: 1px solid $box-border-color;
         & > div {
             padding: 10px;
         }
@@ -98,17 +98,18 @@ body {
             border-bottom: 1px solid $border-color;
             h3 {
                 margin: 10px 0;
+                color: $main-color;
             }
             .author {
-                color: #999;
+                color: $sub-color;
             }
         }
         .card-body {
             line-height: 1.67;
             a {
-                color: lighten(#333333, 10%);
+                color: rgba($main-color, .8);
                 &:hover {
-                    color: #333333;
+                    color: $main-color;
                 }
             }
             img {
@@ -121,7 +122,7 @@ body {
         min-width: 300px;
         width: 300px;
         .aside-card {
-            background-color: white;
+            background-color: $main-background-color;
             border: 1px solid $border-color;
             margin-bottom: 10px;
             a {
@@ -131,22 +132,23 @@ body {
             .list-unstyled .item {
                 padding: 0 10px;
                 &:hover {
-                    background-color: #f7f8fa;
+                    background-color: rgba($main-color, .05);
                 }
             }
             .aside-header {
                 padding: 0 10px;
                 padding-top: 10px;
-                border-bottom: 1px solid #f7f8fa;
+                border-bottom: 1px solid rgba($box-border-color,.4);
                 h3 {
                     font-style: normal;
                     margin: 10px 0;
                     text-transform: uppercase;
+                    color: $main-color;
                 }
             }
             .aside-body {
                 .tags-list {
-                    margin-bottom: 7px;
+                    margin-bottom: 10px;
                 }
                 .tags {
                     padding: 10px;
@@ -169,7 +171,7 @@ body {
             }
             i.num {
                 font-style: normal;
-                background-color: #f7f8fa;
+                background-color: $body-background-color;
                 font-size: 12px;
                 padding: 4px 6px;
                 border-radius: 2px;
@@ -254,7 +256,7 @@ footer {
         position: absolute;
         right: 10px;
         top: -20px;
-        background-color: $main-color;
+        background-color: $primary-color;
         color: white;
         width: 40px;
         height: 40px;
@@ -263,7 +265,7 @@ footer {
         align-items: center;
         justify-content: center;
         &:hover {
-            background-color: darken($main-color, 10%);
+            background-color: darken($primary-color, 10%);
         }
     }
 }
@@ -279,7 +281,7 @@ footer {
             a, span {
                 z-index: 3;
                 color: #fff;
-                background-color: $main-color;
+                background-color: $primary-color;
                 border-color: transparent;
                 cursor: default;
 
@@ -313,7 +315,7 @@ footer {
         &:focus, &:hover {
             z-index: 3;
             color: #fff;
-            background-color: $main-color;
+            background-color: $primary-color;
             border-color: transparent;
             cursor: pointer;
         }
@@ -330,3 +332,37 @@ footer {
     }
 }
 
+.search {
+    input[type="text"] {
+        background: transparent;
+        border: none;
+        width: 100%;
+        outline: none;
+    }
+    form.searching {
+        padding: 5px;
+        border: 1px solid $border-color;
+        margin: 10px;
+        border-radius: 2px;
+    }
+}
+
+.theme {
+    display: flex;
+    align-items: flex-start;
+    font-size: 14px;
+    margin: 10px;
+    ul li button[type="button"] {
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        border: 1px solid;
+        border-radius: 2px;
+        &.light {
+            background-color: white;
+        }
+        &.dark {
+            background-color: #333333;
+        }
+    }
+}
