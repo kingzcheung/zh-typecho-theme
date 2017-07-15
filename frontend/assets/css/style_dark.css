@@ -2734,60 +2734,60 @@ input, button {
 
 /*
 
-Atom One Light by Daniel Gamage
-Original One Light Syntax theme from https://github.com/atom/one-light-syntax
+Atom One Dark by Daniel Gamage
+Original One Dark Syntax theme from https://github.com/atom/one-dark-syntax
 
-base:    #fafafa
-mono-1:  #383a42
-mono-2:  #686b77
-mono-3:  #a0a1a7
-hue-1:   #0184bb
-hue-2:   #4078f2
-hue-3:   #a626a4
-hue-4:   #50a14f
-hue-5:   #e45649
-hue-5-2: #c91243
-hue-6:   #986801
-hue-6-2: #c18401
+base:    #282c34
+mono-1:  #abb2bf
+mono-2:  #818896
+mono-3:  #5c6370
+hue-1:   #56b6c2
+hue-2:   #61aeee
+hue-3:   #c678dd
+hue-4:   #98c379
+hue-5:   #e06c75
+hue-5-2: #be5046
+hue-6:   #d19a66
+hue-6-2: #e6c07b
 
 */
 .hljs {
   display: block;
   overflow-x: auto;
   padding: 0.5em;
-  color: #383a42;
-  background: #fafafa; }
+  color: #abb2bf;
+  background: #282c34; }
 
 .hljs-comment,
 .hljs-quote {
-  color: #a0a1a7;
+  color: #5c6370;
   font-style: italic; }
 
 .hljs-doctag,
 .hljs-keyword,
 .hljs-formula {
-  color: #a626a4; }
+  color: #c678dd; }
 
 .hljs-section,
 .hljs-name,
 .hljs-selector-tag,
 .hljs-deletion,
 .hljs-subst {
-  color: #e45649; }
+  color: #e06c75; }
 
 .hljs-literal {
-  color: #0184bb; }
+  color: #56b6c2; }
 
 .hljs-string,
 .hljs-regexp,
 .hljs-addition,
 .hljs-attribute,
 .hljs-meta-string {
-  color: #50a14f; }
+  color: #98c379; }
 
 .hljs-built_in,
 .hljs-class .hljs-title {
-  color: #c18401; }
+  color: #e6c07b; }
 
 .hljs-attr,
 .hljs-variable,
@@ -2797,7 +2797,7 @@ hue-6-2: #c18401
 .hljs-selector-attr,
 .hljs-selector-pseudo,
 .hljs-number {
-  color: #986801; }
+  color: #d19a66; }
 
 .hljs-symbol,
 .hljs-bullet,
@@ -2805,7 +2805,7 @@ hue-6-2: #c18401
 .hljs-meta,
 .hljs-selector-id,
 .hljs-title {
-  color: #4078f2; }
+  color: #61aeee; }
 
 .hljs-emphasis {
   font-style: italic; }
@@ -2927,7 +2927,8 @@ body {
       .container .article-card .card-header .author {
         color: #999; }
     .container .article-card .card-body {
-      line-height: 1.67; }
+      line-height: 1.67;
+      color: rgba(243, 243, 243, 0.8); }
       .container .article-card .card-body a {
         color: rgba(243, 243, 243, 0.8); }
         .container .article-card .card-body a:hover {
@@ -3000,7 +3001,7 @@ ul.list-unstyled {
 footer {
   padding-top: 50px;
   color: white;
-  background-color: #333; }
+  background-color: #323535; }
   footer .foot-group {
     max-width: 1000px;
     margin: 0 auto; }
@@ -3010,7 +3011,7 @@ footer {
     margin: 0 auto;
     color: #a9a9a9;
     text-align: center;
-    background-color: #282828;
+    background-color: #222425;
     padding-top: 15px;
     padding-bottom: 15px;
     position: relative; }
@@ -3180,7 +3181,7 @@ footer {
   .header .navbar-toggle {
     display: inline-block;
     outline: none;
-    background: #ffffff;
+    background: #303334;
     border: none;
     padding: 0.33333rem;
     width: 2.13333rem;

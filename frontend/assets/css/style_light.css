@@ -2927,7 +2927,8 @@ body {
       .container .article-card .card-header .author {
         color: #999; }
     .container .article-card .card-body {
-      line-height: 1.67; }
+      line-height: 1.67;
+      color: rgba(38, 38, 38, 0.8); }
       .container .article-card .card-body a {
         color: rgba(38, 38, 38, 0.8); }
         .container .article-card .card-body a:hover {
@@ -3000,7 +3001,7 @@ ul.list-unstyled {
 footer {
   padding-top: 50px;
   color: white;
-  background-color: #333; }
+  background-color: #323535; }
   footer .foot-group {
     max-width: 1000px;
     margin: 0 auto; }
@@ -3010,7 +3011,7 @@ footer {
     margin: 0 auto;
     color: #a9a9a9;
     text-align: center;
-    background-color: #282828;
+    background-color: #222425;
     padding-top: 15px;
     padding-bottom: 15px;
     position: relative; }
@@ -3180,7 +3181,7 @@ footer {
   .header .navbar-toggle {
     display: inline-block;
     outline: none;
-    background: #ffffff;
+    background: #fff;
     border: none;
     padding: 0.33333rem;
     width: 2.13333rem;

@@ -1,11 +1,11 @@
 @charset "UTF-8";
 
 @media (max-width: $phone-size) {
-    body{
+    body {
         font-size: $root-font-size;
     }
     .aside {
-        display: none!important;
+        display: none !important;
     }
     .container {
         width: 100%;
@@ -29,7 +29,7 @@
         .navbar-toggle {
             display: inline-block;
             outline: none;
-            background: #ffffff;
+            background: $main-background-color;
             border: none;
             padding: rem(5px);
             width: rem(32px);

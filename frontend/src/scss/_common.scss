@@ -106,6 +106,7 @@ body {
         }
         .card-body {
             line-height: 1.67;
+            color: rgba($main-color,.8);
             a {
                 color: rgba($main-color, .8);
                 &:hover {
@@ -192,7 +193,7 @@ ul.list-unstyled {
 footer {
     padding-top: 50px;
     color: white;
-    background-color: #333;
+    background-color: #323535;
     .foot-group {
         max-width: $body-width;
         margin: 0 auto;
@@ -206,7 +207,7 @@ footer {
         margin: 0 auto;
         color: #a9a9a9;
         text-align: center;
-        background-color: #282828;
+        background-color: #222425;
         padding-top: 15px;
         padding-bottom: 15px;
         position: relative;
