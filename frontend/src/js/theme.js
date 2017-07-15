@@ -7,7 +7,7 @@
     $(document).on('click', '.theme button[type="button"]', function (e) {
         var theme = $(this).data('theme');
         if (theme === 'dark') {
-            addDark(rootdir, theme);
+            addDark(rootdir);
         } else {
             $('#theme-dark').remove();
         }
@@ -25,7 +25,8 @@
         link.type = link.type = 'text/css';
         link.rel = 'stylesheet';
         link.id = 'theme-dark';
-        link.href = 'assets/css/style_dark.min.css';
+        link.href = rootdir + 'assets/css/style_dark.min.css';
         $('head').get(0).appendChild(link);
+        console.log(rootdir)
     };
 })(jQuery);

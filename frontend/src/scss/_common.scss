@@ -150,6 +150,10 @@ body {
             .aside-body {
                 .tags-list {
                     margin-bottom: 10px;
+                    line-height: 1.5;
+                    a{
+                        font-size: 13px;
+                    }
                 }
                 .tags {
                     padding: 10px;
@@ -160,6 +164,7 @@ body {
                     padding: 2px 4px;
                     border-radius: 2px;
                 }
+
             }
         }
         .category {
