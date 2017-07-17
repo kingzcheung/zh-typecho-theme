@@ -46,6 +46,7 @@
             height: auto;
             right: 16px;
             display: none;
+            z-index: 999;
             &.active {
                 display: block;
             }

@@ -35,3 +35,17 @@ pre, textarea {
 input, button {
     outline: none;
 }
+
+article {
+    p, a, span, div {
+        word-wrap: break-word;
+    }
+}
+
+code {
+    display: block;
+    overflow-x: auto;
+    padding: 0.5em;
+    color: #383a42;
+    background: #f0f3f5;
+}
