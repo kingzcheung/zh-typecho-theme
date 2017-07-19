@@ -402,6 +402,9 @@ pre, textarea {
 input, button {
   outline: none; }
 
+article p, article a, article span, article div {
+  word-wrap: break-word; }
+
 /*!
  *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -2756,7 +2759,7 @@ hue-6-2: #c18401
   overflow-x: auto;
   padding: 0.5em;
   color: #383a42;
-  background: #fafafa; }
+  background: #f0f3f5; }
 
 .hljs-comment,
 .hljs-quote {
@@ -3200,7 +3203,8 @@ footer {
     background: white;
     height: auto;
     right: 16px;
-    display: none; }
+    display: none;
+    z-index: 999; }
     .header .nav.active {
       display: block; }
     .header .nav .navbar-nav li {

@@ -8,10 +8,10 @@
                 <p class="author-desc">A web developer</p>
                 <p><a class="email" href="mailto:kingzcheung@gmail.com">kingzcheung@gmail.com</a></p>
                 <ul class="list-inline social">
-                    <li><a href="javascript:;"><i class="fa fa-google"></i></a></li>
-                    <li><a href="javascript:;"><i class="fa fa-github"></i></a></li>
+                    <li><a href="https://plus.google.com/u/0/118338882647999019418"><i class="fa fa-google"></i></a></li>
+                    <li><a href="https://github.com/KingzCheung"><i class="fa fa-github"></i></a></li>
                     <li><a href="javascript:;"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="javascript:;"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="https://twitter.com/CheungKingz"><i class="fa fa-twitter"></i></a></li>
                 </ul>
             </div>
             <div class="list description">
@@ -22,24 +22,7 @@
                 <div class="desc-h">你可能喜欢</div>
                 <div class="desc-b">
                     <ul class="list-unstyled">
-                        <li>
-                            <a href="javascript:;">
-                                <span>教程：使用python实现一个基于命令行的天气应用</span>
-                                <small>On 2016/06/22</small>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <span>教程：使用python实现一个基于命令行的天气应用</span>
-                                <small>On 2016/06/22</small>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="javascript:;">
-                                <span>swift学习笔记13之错误处理</span>
-                                <small>On 2016/06/22</small>
-                            </a>
-                        </li>
+                        <?php echo theme_random_posts(3) ?>
                     </ul>
                 </div>
 
@@ -47,7 +30,7 @@
         </div>
     </div>
     <div class="copyright">
-        <span class="footer__copyright">©2015-2017 Kingz Cheung</span>
+        <span class="footer__copyright">©<?php echo date('Y') - 2 ?>-<?php echo date('Y') ?> Kingz Cheung</span>
         <div class="to-top" data-target="html">
             <i class="fa fa-angle-up"></i>
         </div>

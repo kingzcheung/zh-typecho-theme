@@ -5,7 +5,8 @@
  *
  * @return mixed
  */
-function tag_colors_rand_class() {
+function tag_colors_rand_class()
+{
     $color = [
         '#f44336',
         '#e91e63',
@@ -39,35 +40,38 @@ function tag_colors_rand_class() {
  * @throws Typecho_Db_Exception
  * @throws Typecho_Widget_Exception
  */
-function theme_random_posts($number = 5) {
+function theme_random_posts($number = 5)
+{
     $defaults = array(
-        'number'  => $number,
-        'before'  => '',
-        'after'   => '',
-        'xformat' => '<a href="{permalink}" title="{title}">{title}<small>On {year}/{month}/{day}</small></a>',
+        'number' => $number,
+        'before' => '',
+        'after' => '',
+        'xformat' => '<li><a href="{permalink}" title="{title}"><span>{title}</span><small>On {year}/{month}/{day}</small></a></li>',
     );
-    $db       = Typecho_Db::get();
-    $sql      = $db->select()->from('table.contents')
+    $db = Typecho_Db::get();
+    $sql = $db->select()->from('table.contents')
         ->where('status = ?', 'publish')
         ->where('type = ?', 'post')
         ->where('created <= unix_timestamp(now())', 'post')//添加这一句避免未达到时间的文章提前曝光
         ->limit($defaults['number'])
         ->order('RAND()');
-    $result   = $db->fetchAll($sql);
-    echo $defaults['before'];
+    $result = $db->fetchAll($sql);
+
+    $li = '';
     foreach ($result as $val) {
         $val = Typecho_Widget::widget('Widget_Abstract_Contents')->filter($val);
-        echo str_replace(array('{permalink}', '{title}', '{year}', '{month}', '{day}'), array($val['permalink'], $val['title'], $val['year'], $val['month'], $val['day']), $defaults['xformat']);
+        $li .= str_replace(array('{permalink}', '{title}', '{year}', '{month}', '{day}'), array($val['permalink'], $val['title'], $val['year'], $val['month'], $val['day']), $defaults['xformat']);
     }
 
-    return $defaults['after'];
+    return $defaults['before'] . $li . $defaults['after'];
 }
 
 /**
  * 人生格言
  */
-function motto() {
-    $m      = '爱与死之间，只有一步之遥。';
+function motto()
+{
+    $m = '爱与死之间，只有一步之遥。';
     $author = '渡边淳一《爱的流放地》';
 }
 
@@ -76,7 +80,8 @@ function motto() {
  *
  * @return bool
  */
-function isMobile() {
+function isMobile()
+{
 
 //如果有HTTP_X_WAP_PROFILE则一定是移动设备
     if (isset ($_SERVER['HTTP_X_WAP_PROFILE'])) {
