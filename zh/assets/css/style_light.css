@@ -3176,47 +3176,53 @@ footer {
     .container .aside {
       min-width: 0;
       width: 0; }
-  .header .nav-header {
-    width: 100%;
-    -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box; }
-  .header .navbar-toggle {
-    display: inline-block;
-    outline: none;
-    background: #fff;
-    border: none;
-    padding: 0.33333rem;
-    width: 2.13333rem;
-    border-radius: 2px;
-    color: #777;
-    font-size: 1.06667rem; }
-  .header .nav {
-    border: 1px solid rgba(30, 35, 42, 0.06);
-    -webkit-box-shadow: -1px 5px 10px 0px rgba(0, 34, 77, 0.22);
-            box-shadow: -1px 5px 10px 0px rgba(0, 34, 77, 0.22);
-    position: fixed;
-    top: 50px;
-    background: white;
-    height: auto;
-    right: 16px;
-    display: none;
-    z-index: 999; }
-    .header .nav.active {
-      display: block; }
-    .header .nav .navbar-nav li {
-      display: block;
-      min-width: 6.66667rem; }
-    .header .nav .navbar-nav a {
-      display: inline-block;
+  .header {
+    overflow: inherit; }
+    .header .nav-header {
       width: 100%;
-      line-height: 2.66667rem;
-      height: auto;
+      -webkit-box-pack: justify;
+      -webkit-justify-content: space-between;
+          -ms-flex-pack: justify;
+              justify-content: space-between;
       -webkit-box-sizing: border-box;
               box-sizing: border-box; }
+    .header .navbar-toggle {
+      display: inline-block;
+      outline: none;
+      background: #fff;
+      border: none;
+      padding: 0.33333rem;
+      width: 2.13333rem;
+      border-radius: 2px;
+      color: #777;
+      font-size: 1.06667rem; }
+      .header .navbar-toggle .active {
+        background: #eee;
+        border-radius: 2px; }
+    .header .nav {
+      border: 1px solid rgba(30, 35, 42, 0.06);
+      -webkit-box-shadow: 0px 5px 10px 0px rgba(0, 34, 77, 0.22);
+              box-shadow: 0px 5px 10px 0px rgba(0, 34, 77, 0.22);
+      position: fixed;
+      top: 50px;
+      background: white;
+      height: auto;
+      right: 0;
+      left: 0;
+      display: none;
+      z-index: 9999; }
+      .header .nav.active {
+        display: block; }
+      .header .nav .navbar-nav li {
+        display: block;
+        min-width: 6.66667rem; }
+      .header .nav .navbar-nav a {
+        display: inline-block;
+        width: 100%;
+        line-height: 2.66667rem;
+        height: auto;
+        -webkit-box-sizing: border-box;
+                box-sizing: border-box; }
   footer {
     padding-top: 2rem; }
     footer .description, footer .youlike {

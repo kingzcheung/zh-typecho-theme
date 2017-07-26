@@ -5,5 +5,6 @@
 ;(function ($) {
     $(document).on('click', '.navbar-toggle', function (e) {
         $('nav.nav').toggleClass('active');
+        $(this).toggleClass('active');
     });
 })(jQuery);
