@@ -2915,7 +2915,8 @@ body {
   padding: 0 16px;
   margin: 10px auto; }
   .container .main {
-    margin-right: 10px; }
+    margin-right: 10px;
+    width: 690px; }
   .container .article-card {
     margin-bottom: 10px;
     background: #fff;
@@ -3223,6 +3224,17 @@ footer {
         height: auto;
         -webkit-box-sizing: border-box;
                 box-sizing: border-box; }
+  .nav-mask {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.27);
+    z-index: 99;
+    display: none; }
+    .nav-mask.active {
+      display: block; }
   footer {
     padding-top: 2rem; }
     footer .description, footer .youlike {

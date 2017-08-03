@@ -13,6 +13,5 @@
     $(document).on('click', '.nav-mask', function (e) {
         $(this).removeClass('active');
         $('nav.nav').removeClass('active');
-
     });
 })(jQuery);

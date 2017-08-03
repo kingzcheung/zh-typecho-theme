@@ -37,8 +37,9 @@
     </div>
 </footer>
 <!--<script src="--><?php //$this->options->themeUrl('assets/js/jquery.min.js'); ?><!--"></script>-->
-<script src="https://cdn.bootcss.com/jquery/1.12.0/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/jquery/1.12.0/jquery.min.js"></script>
 <script src="<?php $this->options->themeUrl('assets/js/main.min.js'); ?>"></script>
+<script src="//cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
 <script>
     if (typeof hljs !== 'undefined') hljs.initHighlightingOnLoad();
 </script>

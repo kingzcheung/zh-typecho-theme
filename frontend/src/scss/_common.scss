@@ -13,7 +13,7 @@ body {
     top: 0;
     left: 0;
     right: 0;
-    border-bottom: 1px solid rgba($box-border-color,.6);
+    border-bottom: 1px solid rgba($box-border-color, .6);
 
     &.is-fixed {
         position: fixed;
@@ -86,6 +86,7 @@ body {
     margin: 10px auto;
     .main {
         margin-right: 10px;
+        width: 690px;
     }
     .article-card {
         margin-bottom: 10px;
@@ -106,7 +107,7 @@ body {
         }
         .card-body {
             line-height: 1.67;
-            color: rgba($main-color,.8);
+            color: rgba($main-color, .8);
             a {
                 color: rgba($main-color, .8);
                 &:hover {
@@ -139,7 +140,7 @@ body {
             .aside-header {
                 padding: 0 10px;
                 padding-top: 10px;
-                border-bottom: 1px solid rgba($box-border-color,.4);
+                border-bottom: 1px solid rgba($box-border-color, .4);
                 h3 {
                     font-style: normal;
                     margin: 10px 0;
@@ -151,7 +152,7 @@ body {
                 .tags-list {
                     margin-bottom: 10px;
                     line-height: 1.5;
-                    a{
+                    a {
                         font-size: 13px;
                     }
                 }

@@ -2915,7 +2915,8 @@ body {
   padding: 0 16px;
   margin: 10px auto; }
   .container .main {
-    margin-right: 10px; }
+    margin-right: 10px;
+    width: 690px; }
   .container .article-card {
     margin-bottom: 10px;
     background: #303334;
