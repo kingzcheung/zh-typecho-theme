@@ -31,6 +31,7 @@
     </div>
     <div class="copyright">
         <span class="footer__copyright">©<?php echo date('Y') - 2 ?>-<?php echo date('Y') ?> Kingz Cheung</span>
+        | <a href="http://www.miitbeian.gov.cn/">粤ICP备14084412号</a>
         <div class="to-top" data-target="html">
             <i class="fa fa-angle-up"></i>
         </div>
