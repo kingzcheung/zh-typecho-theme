@@ -1,22 +1,26 @@
 <?php if (!defined('__TYPECHO_ROOT_DIR__')) exit; ?>
-
+<?php require __DIR__ . '/vendor/autoload.php'?>
+<?php
+$dotenv = new Dotenv\Dotenv(__DIR__);
+$dotenv->load();
+?>
 <footer>
     <div class="foot-group">
         <div class="container">
             <div class="list about">
-                <h2 class="author-name">Kingz Cheung</h2>
-                <p class="author-desc">A web developer</p>
-                <p><a class="email" href="mailto:kingzcheung@gmail.com">kingzcheung@gmail.com</a></p>
+                <h2 class="author-name"><?php echo getenv('AUTHOR_NAME')?></h2>
+                <p class="author-desc"><?php echo getenv('AUTHOR_DESC')?></p>
+                <p><a class="email" href="mailto:<?php echo getenv('AUTHOR_EMAIL')?>"><?php echo getenv('AUTHOR_EMAIL')?></a></p>
                 <ul class="list-inline social">
-                    <li><a href="https://plus.google.com/u/0/118338882647999019418"><i class="fa fa-google"></i></a></li>
-                    <li><a href="https://github.com/KingzCheung"><i class="fa fa-github"></i></a></li>
+                    <li><a href="<?php echo getenv('AUTHOR_GOOGLE')?>"><i class="fa fa-google"></i></a></li>
+                    <li><a href="<?php echo getenv('AUTHOR_GITHUB')?>"><i class="fa fa-github"></i></a></li>
                     <li><a href="javascript:;"><i class="fa fa-facebook"></i></a></li>
-                    <li><a href="https://twitter.com/CheungKingz"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="<?php echo getenv('AUTHOR_TWITTER')?>"><i class="fa fa-twitter"></i></a></li>
                 </ul>
             </div>
             <div class="list description">
                 <div class="desc-h">个人简介</div>
-                <div class="desc-b">做一个快乐的人</div>
+                <div class="desc-b"><?php echo getenv('AUTHOR_INTRODUCTION')?></div>
             </div>
             <div class="list youlike">
                 <div class="desc-h">你可能喜欢</div>
@@ -30,8 +34,8 @@
         </div>
     </div>
     <div class="copyright">
-        <span class="footer__copyright">©<?php echo date('Y') - 2 ?>-<?php echo date('Y') ?> Kingz Cheung</span>
-        | <a href="http://www.miitbeian.gov.cn/">粤ICP备14084412号</a>
+        <span class="footer__copyright">©<?php echo date('Y') - 2 ?>-<?php echo date('Y') ?> <?php echo getenv('USER')?></span>|
+        <a href="http://www.miitbeian.gov.cn/"><?php echo getenv('BEIAN')?></a>
         <div class="to-top" data-target="html">
             <i class="fa fa-angle-up"></i>
         </div>

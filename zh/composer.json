@@ -1,0 +1,12 @@
+{
+    "name": "kingzcheung/zh",
+    "authors": [
+        {
+            "name": "kingzcheung",
+            "email": "kingzcheung@gmail.com"
+        }
+    ],
+    "require": {
+        "vlucas/phpdotenv": "^2.4"
+    }
+}

@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+@import "normalize";
+@import "init";
+@import "var_light";
+@import "reset";
+
+.center-content {
+    margin-top: 200px;
+    &.text-center {
+        text-align: center;
+    }
+    .error-number {
+        font-size: 100px;
+    }
+
+    .return-home {
+        border: 1px solid $border-color;
+        padding: 3px 10px;
+        border-radius: 3px;
+        margin-bottom: 20px;
+        font-size: 14px;
+        &:hover, &:focus {
+            background-color: $border-color;
+        }
+    }
+}
+@media (max-width: $phone-size) {
+    .center-content{
+        margin-top:rem(200px);
+
+        .error-number {
+            font-size: rem(100px);
+        }
+        p{
+            margin-bottom: rem(50px);
+        }
+        .return-home{
+            padding: rem(3px) rem(10px);
+            border-radius: rem(3px);
+            margin-bottom: rem(20px);
+            font-size: rem(14px);
+        }
+    }
+}

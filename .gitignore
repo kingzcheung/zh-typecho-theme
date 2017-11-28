@@ -1,0 +1,13 @@
+# Created by .ignore support plugin (hsz.mobi)
+将删除 .idea/inspectionProfiles/
+将删除 .idea/modules.xml
+将删除 .idea/workspace.xml
+将删除 .idea/zh-typecho-theme.iml
+将删除 frontend/assets/css/style_dark.min.css
+将删除 frontend/assets/css/style_light.min.css
+将删除 frontend/node_modules/
+将删除 frontend/src/images/
+将删除 zh/vendor/
+将删除 .idea/dataSources.local.xml
+将删除 .idea/dataSources/
+将删除 .env
