@@ -34,7 +34,7 @@
 
     <div class="aside-card">
         <div class="aside-header">
-            <h3>ARCHIVE</h3>
+            <h3>Tags</h3>
         </div>
         <div class="aside-body">
             <?php $this->widget('Widget_Metas_Tag_Cloud', 'sort=mid&ignoreZeroCount=1&desc=0&limit=30')->to($tags); ?>
