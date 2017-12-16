@@ -15,3 +15,12 @@
         color: $primary-color;
     }
 }
+table {
+    border-collapse: collapse;
+    tr {
+        th,td {
+            border: 1px solid #eeeeee;
+            padding: 5px 10px;
+        }
+    }
+}

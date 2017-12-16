@@ -3169,6 +3169,12 @@ footer {
     .theme ul li button[type="button"].dark {
       background-color: #333333; }
 
+table {
+  border-collapse: collapse; }
+  table tr th, table tr td {
+    border: 1px solid #eeeeee;
+    padding: 5px 10px; }
+
 @media (max-width: 768px) {
   body {
     font-size: 15px; }
@@ -3266,3 +3272,9 @@ footer {
   .card a {
     font-size: inherit;
     color: #2196f3; }
+
+table {
+  border-collapse: collapse; }
+  table tr th, table tr td {
+    border: 1px solid #eeeeee;
+    padding: 5px 10px; }
