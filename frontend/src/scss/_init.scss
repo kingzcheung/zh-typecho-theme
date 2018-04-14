@@ -5,10 +5,44 @@ $nav-height: 50px;
 $nav-width: 1000px;
 $body-width: $nav-width;
 $active-color: rgba(50, 75, 95, 0.06);
+//字体 COLOR
+$main-color: #262626;
+$sub-color: #999;
+
+//COLOR
+$body-background-color: #f7f8fa; //背景 color
+$main-background-color: #fff; //主要背景 color
+$box-border-color: #e7eaf1; //外框的color
+
+$border-color: rgba(231, 234, 241, 0.68); //正常边框color
 
 $primary-color: #2196f3;
+$pink-color: #E91E63;
+$purple-color: #9C27B0;
+$bule-pruple-color: #673ab7;
+$blue-color: #3F51B5;
+$light-blue-color: #2196F3;
+$cyan-blue-color: #009688;
+$green-color: #4CAF50;
+$yellow-color: #FFC107;
+$orange-color: #FF9800;
+$dark-orange-color: #FF5722;
 
 $phone-size: 768px;
+
+$colors: (
+        primary: $primary-color,
+        pink: $pink-color,
+        purple: $purple-color,
+        bule-pruple: $bule-pruple-color,
+        bule: $blue-color,
+        light-blue: $light-blue-color,
+        cyan-blue: $cyan-blue-color,
+        green: $green-color,
+        yellow: $yellow-color,
+        orange: $orange-color,
+        dark-orange: $dark-orange-color,
+);
 
 @function rem($px) {
     @return $px / $root-font-size * 1rem;

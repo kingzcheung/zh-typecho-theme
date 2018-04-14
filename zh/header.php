@@ -75,6 +75,7 @@ __/\\\________/\\\______________________________________________________________
                         <a href="<?php $category->permalink(); ?>"
                            title="<?php $category->name(); ?>"><?php $category->name(); ?></a></li>
                 <?php endwhile; ?>
+                <li><a href="/project.html">PROJECTS</a></li>
             </ul>
         </nav>
     </div>
