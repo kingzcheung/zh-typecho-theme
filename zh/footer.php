@@ -35,7 +35,6 @@ $dotenv->load();
     </div>
     <div class="copyright">
         <span class="footer__copyright">©<?php echo date('Y') - 2 ?>-<?php echo date('Y') ?> <?php echo getenv('USER')?></span>|
-        <a href="http://www.miitbeian.gov.cn/"><?php echo getenv('BEIAN')?></a>
         <div class="to-top" data-target="html">
             <i class="fa fa-angle-up"></i>
         </div>
