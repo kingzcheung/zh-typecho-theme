@@ -8,79 +8,75 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     minifycss = require('gulp-clean-css'),
     jshint = require('gulp-jshint'),
-    uglify = require('gulp-uglify'),
-    imagemin = require('gulp-imagemin'),
-    rename = require('gulp-rename'),
-    concat = require('gulp-concat'),
     notify = require('gulp-notify'),
     cache = require('gulp-cache'),
-    livereload = require('gulp-livereload');
+    concat = require('gulp-concat'),
+    uglify = require('gulp-uglify'),
+    rename = require('gulp-rename'),
+    cleanCSS = require('gulp-clean-css'),
+    del = require('del');
 
-// css任务
-gulp.task('stylesheet', function () {
-    //编译sass
-    return gulp.src('src/scss/*.scss')
+var paths = {
+    styles: {
+        src: 'src/scss/**/*.scss',
+        dest: 'assets/css/'
+    },
+    scripts: {
+        src: 'src/js/**/*.js',
+        dest: 'assets/js/'
+    },
+    fonts:{
+        src: 'src/fonts/**/*.{otf,eot,svg,ttf,woff,woff2}',
+        dest: 'assets/fonts/'
+    }
+};
+
+function clean() {
+    // You can use multiple globbing patterns as you would with `gulp.src`,
+    // for example if you are using del 2.0 or above, return its promise
+    return del([ 'assets' ]);
+}
+
+/*
+ * Define our tasks using plain functions
+ */
+function styles() {
+    return gulp.src(paths.styles.src)
         .pipe(sass())
-        //添加前缀
-        .pipe(autoprefixer({
-            browsers:['last 2 version', 'safari 5', 'ie 8', 'ie 9', 'opera 12.1', 'ios 6', 'android 4','ios 7','ios 8'],
-            cascade: true
-        }))
-        //保存未压缩文件到我们指定的目录下面
-        .pipe(gulp.dest('assets/css'))
-        //给文件添加.min后缀
-        .pipe(rename({suffix: '.min'}))
-        //压缩样式文件
-        .pipe(minifycss())
-        //输出压缩文件到指定目录
-        .pipe(gulp.dest('assets/css'))
-        //提醒任务完成
-        .pipe(notify({message: '样式编译完成！'}));
-});
+        .pipe(autoprefixer())
+        .pipe(cleanCSS())
+        // pass in options to the stream
+        // .pipe(rename({
+        //     basename: 'main',
+        //     suffix: '.min'
+        // }))
+        .pipe(gulp.dest(paths.styles.dest));
+}
 
-// javascript任务
-gulp.task('js', function () {
-    //js代码校验
-    return gulp.src(['src/jquery.min.js','src/js/*.js'])
-        .pipe(jshint())
-        .pipe(jshint.reporter('default'))
-        //js代码合并
-        .pipe(concat('main.js'))
-        //给文件添加.min后缀
-        .pipe(rename({suffix: '.min'}))
-        //压缩脚本文件
+function scripts() {
+    return gulp.src(paths.scripts.src, { sourcemaps: true })
         .pipe(uglify())
-        //输出压缩文件到指定目录
-        .pipe(gulp.dest('assets/js'))
-        //提醒任务完成
-        .pipe(notify({message: 'javascript task complete'}));
-});
+        .pipe(concat('main.min.js'))
+        .pipe(gulp.dest(paths.scripts.dest));
+}
 
-// Images任务
-gulp.task('images', function () {
-    return gulp.src('src/images/*')
-        .pipe(cache(imagemin({optimizationLevel: 3, progressive: true, interlaced: true})))
-        .pipe(gulp.dest('assets/images'))
-        .pipe(notify({message: 'Images task complete'}));
-});
+function fonts() {
+    return gulp.src(paths.fonts.src)
+        .pipe(gulp.dest(paths.fonts.dest));
+}
 
-//FONTS
-gulp.task('fonts',function () {
-   return gulp.src('src/fonts/*')
-       .pipe(gulp.dest('assets/fonts'))
-       .pipe(notify({message: '字体加载成功'}));
-});
+function watch() {
+    gulp.watch(paths.scripts.src, scripts);
+    gulp.watch(paths.styles.src, styles);
+    gulp.watch(paths.fonts.src, fonts);
+}
+var build = gulp.series(clean, gulp.parallel(styles, scripts,fonts));
 
-// default 任务
-gulp.task('default', function () {
-    // Watch .scss files
-    gulp.watch('src/scss/*.scss', ['stylesheet']);
-    // Watch .js files
-    gulp.watch('src/js/*.js', ['js']);
-    // Watch image files
-    gulp.watch('src/images/*', ['images']);
-    // Create LiveReload server
-    livereload.listen();
-    // Watch any files in assets/, reload on change
-    gulp.watch(['./*.html','./src/**']).on('change', livereload.changed);
-});
+exports.clean = clean;
+exports.styles = styles;
+exports.scripts = scripts;
+exports.fonts = fonts;
+exports.watch = watch;
+exports.build = build;
+
+exports.default = build;
