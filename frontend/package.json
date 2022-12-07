@@ -6,7 +6,7 @@
   "dependencies": {
     "del": "^5.1.0",
     "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^4.0.0",
+    "gulp-autoprefixer": "^8.0.0",
     "gulp-cache": "^0.4.6",
     "gulp-clean-css": "^3.6.0",
     "gulp-concat": "^2.6.1",
